@@ -23,7 +23,7 @@ app.post("/authenticate", async (req, res) => {
     );
     return res.status(r.status).json(r.data);
   } catch (err) {
-    return res.status(e.response.status).json(e.response.data);
+    return res.status(err.response.status).json(err.response.data);
   }
 });
 
